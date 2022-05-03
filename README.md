@@ -1,11 +1,11 @@
 # Projet-3iL
 ## Front Angular 
 
-npm i -g @nestjs/cli
+npm install -g @angular/cli
 
 ## Back :  Nest.js 
 
-npm install -g @angular/cli
+npm i -g @nestjs/cli
 
 ## ORM 
 ## API REST
