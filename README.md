@@ -1,11 +1,11 @@
 # Projet-3iL
 ## Front Angular 
 
-npm install -g @angular/cli
+npm i -g @nestjs/cli
 
 ## Back :  Nest.js 
 
-npm i -g @nestjs/cli
+npm install -g @angular/cli
 
 ## ORM 
 ## API REST
@@ -16,4 +16,4 @@ npm i -g @nestjs/cli
 ## Création d'un model MVC
 
 
-![dogemon](https://user-images.githubusercontent.com/101574941/166453097-d7298ed6-5ab9-49b0-90ac-4afcf68cbf0a.jpg)
+![dogemon](https://user-images.githubusercontent.com/101574941/166457072-7df4762a-9953-4da4-9248-2305bccec948.jpg)
