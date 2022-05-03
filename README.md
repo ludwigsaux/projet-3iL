@@ -15,4 +15,5 @@ npm install -g @angular/cli
 
 ## Création d'un model MVC
 
-![dogemon](https://user-images.githubusercontent.com/101574941/166451557-7f8b7902-4807-4530-8f29-8a945924c8cd.jpg)
+
+![dogemon](https://user-images.githubusercontent.com/101574941/166453097-d7298ed6-5ab9-49b0-90ac-4afcf68cbf0a.jpg)
