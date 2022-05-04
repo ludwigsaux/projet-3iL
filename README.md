@@ -21,3 +21,6 @@ npm install -g @angular/cli
 ## Diagrammes de séquence
 Lancement d'une partie (à vérifier)
 ![dogemon_sequence_lancement_partie](https://user-images.githubusercontent.com/101574941/166682508-efd7ec0c-734f-482d-8776-60fdf56dfc11.png)
+
+Déroulement d'une partie 
+![deroulement_partie](https://user-images.githubusercontent.com/101574941/166699856-7e164897-0df7-4926-b113-6994c0e6b123.png)
