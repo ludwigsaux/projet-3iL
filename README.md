@@ -16,6 +16,7 @@ npm install -g @angular/cli
 ## Création d'un model MVC
 
 ## Diagramme MCD
+Déroulement d'une partie
 ![dogemon](https://user-images.githubusercontent.com/101574941/166457072-7df4762a-9953-4da4-9248-2305bccec948.jpg)
 
 ## Diagrammes de séquence
