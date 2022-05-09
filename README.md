@@ -23,5 +23,10 @@ Déroulement d'une partie
 Lancement d'une partie (à vérifier)
 ![dogemon_sequence_lancement_partie](https://user-images.githubusercontent.com/101574941/166682508-efd7ec0c-734f-482d-8776-60fdf56dfc11.png)
 
+<img width="836" alt="Capture" src="https://user-images.githubusercontent.com/75636940/167406083-3a9c1605-3ce0-45ba-aa80-f31ae2a8458c.png">
+
+
 Déroulement d'une partie 
 ![deroulement_partie](https://user-images.githubusercontent.com/101574941/166701418-3d173f12-4617-4297-be54-1094c224bbcb.png)
+
+
