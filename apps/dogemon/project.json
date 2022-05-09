@@ -1,0 +1,89 @@
+{
+  "projectType": "application",
+  "sourceRoot": "apps/dogemon/src",
+  "prefix": "dogemon",
+  "targets": {
+    "build": {
+      "executor": "@angular-devkit/build-angular:browser",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/apps/dogemon",
+        "index": "apps/dogemon/src/index.html",
+        "main": "apps/dogemon/src/main.ts",
+        "polyfills": "apps/dogemon/src/polyfills.ts",
+        "tsConfig": "apps/dogemon/tsconfig.app.json",
+        "assets": ["apps/dogemon/src/favicon.ico", "apps/dogemon/src/assets"],
+        "styles": ["apps/dogemon/src/styles.css"],
+        "scripts": []
+      },
+      "configurations": {
+        "production": {
+          "budgets": [
+            {
+              "type": "initial",
+              "maximumWarning": "500kb",
+              "maximumError": "1mb"
+            },
+            {
+              "type": "anyComponentStyle",
+              "maximumWarning": "2kb",
+              "maximumError": "4kb"
+            }
+          ],
+          "fileReplacements": [
+            {
+              "replace": "apps/dogemon/src/environments/environment.ts",
+              "with": "apps/dogemon/src/environments/environment.prod.ts"
+            }
+          ],
+          "outputHashing": "all"
+        },
+        "development": {
+          "buildOptimizer": false,
+          "optimization": false,
+          "vendorChunk": true,
+          "extractLicenses": false,
+          "sourceMap": true,
+          "namedChunks": true
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "serve": {
+      "executor": "@angular-devkit/build-angular:dev-server",
+      "configurations": {
+        "production": {
+          "browserTarget": "dogemon:build:production"
+        },
+        "development": {
+          "browserTarget": "dogemon:build:development"
+        }
+      },
+      "defaultConfiguration": "development",
+      "options": {
+        "proxyConfig": "apps/dogemon/proxy.conf.json"
+      }
+    },
+    "extract-i18n": {
+      "executor": "@angular-devkit/build-angular:extract-i18n",
+      "options": {
+        "browserTarget": "dogemon:build"
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": ["apps/dogemon/**/*.ts", "apps/dogemon/**/*.html"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/apps/dogemon"],
+      "options": {
+        "jestConfig": "apps/dogemon/jest.config.ts",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": []
+}

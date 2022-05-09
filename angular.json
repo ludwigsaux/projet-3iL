@@ -1,0 +1,9 @@
+{
+  "version": 2,
+  "projects": {
+    "api": "apps/api",
+    "api-interfaces": "libs/api-interfaces",
+    "dogemon": "apps/dogemon",
+    "dogemon-e2e": "apps/dogemon-e2e"
+  }
+}
