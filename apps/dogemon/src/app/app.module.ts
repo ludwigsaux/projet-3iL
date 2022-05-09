@@ -9,6 +9,7 @@ import { MainMenuComponent } from './main-menu/main-menu.component';
 import { DogesComponent } from './doges/doges.component';
 import { DogeDetailComponent } from './doge-detail/doge-detail.component';
 import { InscriptionComponent } from './inscription/inscription.component';
+import { GamebotComponent } from './gamebot/gamebot.component';
 
 
 @NgModule({
@@ -19,6 +20,7 @@ import { InscriptionComponent } from './inscription/inscription.component';
     DogesComponent,
     DogeDetailComponent,
     InscriptionComponent,
+    GamebotComponent
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],
