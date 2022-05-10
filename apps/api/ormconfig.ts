@@ -1,10 +1,14 @@
 import { SqliteConnectionOptions } from "typeorm/driver/sqlite/SqliteConnectionOptions";
+import { Creature } from "./src/app/creature.entity";
 
 const config: SqliteConnectionOptions = {
     type:'sqlite',
-    database:'db',
-    entities: ['/api/src/app/*.entity.js'],
-    synchronize: true
+    database: "database.sqlite",
+    entities: [
+      Creature
+    ],
+    synchronize: true,
+    logging: true
 }
 
 export default config;

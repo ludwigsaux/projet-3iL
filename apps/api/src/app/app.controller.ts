@@ -6,12 +6,6 @@ import { Message } from '@dogemon/api-interfaces';
 
 import { AppService } from './app.service';
 
-import { GameController } from './game/game.controller';
-
-import { GamebotController } from './gamebot/gamebot.controller';
-
-
-
 @Controller()
 export class AppController {
   
