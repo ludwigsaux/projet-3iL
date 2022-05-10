@@ -21,6 +21,7 @@ import { GamebotComponent } from './gamebot/gamebot.component';
     DogeDetailComponent,
     InscriptionComponent,
     GamebotComponent,
+    GameComponent
   ],
   
   imports: [BrowserModule, AppRoutingModule, FormsModule],
