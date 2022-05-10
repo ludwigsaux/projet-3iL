@@ -11,6 +11,8 @@ import { DogeDetailComponent } from './doge-detail/doge-detail.component';
 import { InscriptionComponent } from './inscription/inscription.component';
 
 
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,4 +26,6 @@ import { InscriptionComponent } from './inscription/inscription.component';
   providers: [],
   bootstrap: [AppComponent],
 })
+
+
 export class AppModule {}
