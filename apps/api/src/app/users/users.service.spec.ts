@@ -17,7 +17,7 @@ describe('UsersService', () => {
   });
   it.each`
     name      | returnVal
-    ${'john'} | ${{ userId: 1, username: 'john', password: 'changeme' }}
+    ${'john'} | ${{ userId: 1, username: 'joueur1', password: 'securite' }}
   `(
     'should call findOne for $name and return $returnVal',
     async ({ name, returnVal }: { name: string; returnVal: User }) => {
