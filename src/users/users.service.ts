@@ -24,6 +24,4 @@ export class UsersService {
         return this.users.find(user => user.username === username);
       }
 
-
-
 }
