@@ -12,7 +12,6 @@ import { InscriptionComponent } from './inscription/inscription.component';
 import { GameComponent } from './game/game.component';
 import { GamebotComponent } from './gamebot/gamebot.component';
 
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,8 +20,9 @@ import { GamebotComponent } from './gamebot/gamebot.component';
     DogesComponent,
     DogeDetailComponent,
     InscriptionComponent,
-    GamebotComponent
+    GamebotComponent,
   ],
+  
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],
   bootstrap: [AppComponent],
