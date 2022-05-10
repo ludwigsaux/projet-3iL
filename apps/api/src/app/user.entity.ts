@@ -1,16 +1,19 @@
 import { Column, Entity, PrimaryGeneratedColumn } from "typeorm";
 
 @Entity()
-export class Creature {
+export class User {
     @PrimaryGeneratedColumn()
-    id_creature:number;
+    id_user:number;
 
     @Column()
-    name_creature: string;
+    username: string;
 
     @Column()
-    hp_creature: number;
+    password: string;
 
     @Column()
-    armor_creature: number;
+    number_played: number;
+
+    @Column()
+    number_win: number;
 }
