@@ -1,8 +1,9 @@
 import { Injectable } from '@nestjs/common';
+import { Message } from '@dogemon/api-interfaces';
 
 @Injectable()
 export class AppService {
-  getHello(): string {
-    return 'Hello World!';
+  getData(): Message {
+    return { message: 'Welcome to api!' };
   }
 }
