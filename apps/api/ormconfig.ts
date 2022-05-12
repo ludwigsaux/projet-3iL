@@ -13,13 +13,7 @@ const config: SqliteConnectionOptions = {
       User,
       TypeCompetence
     ],
-    synchronize: false,
-    migrations: [
-      'dist/src/db/migrations/*.js'
-    ],
-    cli: {
-      migrationsDir: 'src/db/migrations'
-    },
+    synchronize: true,
     logging: true
 }
 

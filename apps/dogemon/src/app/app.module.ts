@@ -11,6 +11,7 @@ import { DogeDetailComponent } from './doge-detail/doge-detail.component';
 import { InscriptionComponent } from './inscription/inscription.component';
 import { GameComponent } from './game/game.component';
 import { GamebotComponent } from './gamebot/gamebot.component';
+import { HttpClient,HttpClientModule,HttpHeaders } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,7 @@ import { GamebotComponent } from './gamebot/gamebot.component';
     GameComponent
   ],
   
-  imports: [BrowserModule, AppRoutingModule, FormsModule],
+  imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
   providers: [],
   bootstrap: [AppComponent],
 })

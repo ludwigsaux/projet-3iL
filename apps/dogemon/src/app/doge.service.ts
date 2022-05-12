@@ -2,18 +2,23 @@ import { Injectable } from '@angular/core';
 import { Doge } from './doge';
 import { DOGES } from './mock-doges';
 import { Observable, of } from 'rxjs';
-
+import { HttpClient } from '@angular/common/http';
 @Injectable({
   providedIn: 'root'
 })
 
 export class DogeService {
 
-  constructor() { }
+  private dogesUrl='http://localhost:4000/api/creatures';
+
+  constructor(
+    private http: HttpClient
+  ) { }
 
   getDoges(): Observable<Doge[]>{
-    const doges = of(DOGES);
-    return doges;
+    //const doges = of(DOGES);
+    //return doges;
+    return this.http.get<Doge[]>(this.dogesUrl)
   }
 
 }
