@@ -11,7 +11,14 @@ import { DogeDetailComponent } from './doge-detail/doge-detail.component';
 import { InscriptionComponent } from './inscription/inscription.component';
 import { GameComponent } from './game/game.component';
 import { GamebotComponent } from './gamebot/gamebot.component';
-import { HttpClient,HttpClientModule,HttpHeaders } from '@angular/common/http';
+import {
+  HttpClient,
+  HttpClientModule,
+  HttpHeaders,
+} from '@angular/common/http';
+import { LoginComponent } from './login/login.component';
+import { LogoutComponent } from './logout/logout.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -22,10 +29,12 @@ import { HttpClient,HttpClientModule,HttpHeaders } from '@angular/common/http';
     DogeDetailComponent,
     InscriptionComponent,
     GamebotComponent,
-    GameComponent
+    GameComponent,
+    LoginComponent,
+    LogoutComponent,
   ],
-  
-  imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
+
+  imports: [BrowserModule, AppRoutingModule, FormsModule, ReactiveFormsModule, HttpClientModule],
   providers: [],
   bootstrap: [AppComponent],
 })
