@@ -1,10 +1,15 @@
 <div *ngIf="doge">
 
-    <h2>{{doge.nameCreature | uppercase}} Details</h2>
+    <h2>{{doge.nameCreature | uppercase}} DETAILS</h2>
     <div><span>id: </span>{{doge.idCreature}}</div>
     <div>
-      <label for="doge-name">Doge name: </label>
-      <input id="doge-name" [(ngModel)]="doge.nameCreature" placeholder="name">
+      <label for="doge-name">Doge name:   <span>{{doge.nameCreature}}</span></label>
+      <br>
+      <label for="doge-name">Doge hp:     <span>{{doge.hpCreature}}</span></label>
+      <br>
+      <label for="doge-name">Doge armor:  <span>{{doge.armorCreature}}</span></label>
+      <br>
+      <img class="imageDetails" src="{{doge.imagePath}}">
     </div>
   
   </div>
