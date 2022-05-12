@@ -8,13 +8,17 @@ import config from '../../ormconfig'
 import { Creature } from './creature.entity';
 import { CreatureController } from './creature/creature.controller';
 import { CreatureService } from './creature/creature.service';
+import { Competence } from './competence.entity';
+import { CompetenceController } from './competence/competence.controller';
+import { CompetenceService } from './competence/competence.service';
 
 @Module({
   imports: [
       TypeOrmModule.forRoot(config), 
-      TypeOrmModule.forFeature([Creature])
+      TypeOrmModule.forFeature([Creature]),
+      TypeOrmModule.forFeature([Competence])
   ],
-  controllers: [AppController, CreatureController],
-  providers: [AppService, CreatureService],
+  controllers: [AppController, CreatureController, CompetenceController],
+  providers: [AppService, CreatureService, CompetenceService],
 })
 export class AppModule {}
