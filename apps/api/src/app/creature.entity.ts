@@ -4,17 +4,17 @@ import { Column, Entity, PrimaryGeneratedColumn } from "typeorm";
 @Entity()
 export class Creature {
     @PrimaryGeneratedColumn()
-    id_creature:number;
+    idCreature: number;
 
     @Column()
-    image_path: string;
+    imagePath: string;
 
     @Column()
-    name_creature: string    
+    nameCreature: string    
 
     @Column()
-    hp_creature: number;
+    hpCreature: number;
 
     @Column()
-    armor_creature: number;
+    armorCreature: number;
 }

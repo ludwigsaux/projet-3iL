@@ -1,10 +1,10 @@
 <div *ngIf="doge">
 
-    <h2>{{doge.name | uppercase}} Details</h2>
-    <div><span>id: </span>{{doge.id}}</div>
+    <h2>{{doge.nameCreature | uppercase}} Details</h2>
+    <div><span>id: </span>{{doge.idCreature}}</div>
     <div>
       <label for="doge-name">Doge name: </label>
-      <input id="doge-name" [(ngModel)]="doge.name" placeholder="name">
+      <input id="doge-name" [(ngModel)]="doge.nameCreature" placeholder="name">
     </div>
   
   </div>

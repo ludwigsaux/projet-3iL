@@ -1,4 +1,4 @@
 export interface Doge{
-    id: number;
-    name: string;
+    idCreature: number;
+    nameCreature: string;
 }

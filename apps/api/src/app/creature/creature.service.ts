@@ -15,16 +15,16 @@ export class CreatureService {
     return this.creatureRepository.find(); //SELECT * from creature
   }
 
-  getOneById(id_creature:number): Promise<Creature>{
-    return this.creatureRepository.findOneOrFail(id_creature);
+  getOneById(idCreature:number): Promise<Creature>{
+    return this.creatureRepository.findOneOrFail(idCreature);
   }
 
-  getOneByName(name_creature:string): Promise<Creature>{
-      return this.creatureRepository.findOneOrFail(name_creature)
+  getOneByName(nameCreature:string): Promise<Creature>{
+      return this.creatureRepository.findOneOrFail(nameCreature)
   }
 
-  createCreature(name_creature:string,image_path: string, hp_creature:number, armor_creature: number): Promise<Creature>{
-    const newCreature = this.creatureRepository.create({name_creature,image_path, hp_creature, armor_creature});
+  createCreature(nameCreature:string,imagePath: string, hpCreature:number, armorCreature: number): Promise<Creature>{
+    const newCreature = this.creatureRepository.create({nameCreature,imagePath, hpCreature, armorCreature});
     return this.creatureRepository.save(newCreature)
   }
     

@@ -15,9 +15,9 @@ constructor(private readonly creatureService: CreatureService) {}
 
 @Get('createcreature')
   async setCreatures(): Promise<void>{
-    //this.creatureService.createCreature("droopy",'apps/image/droopy.jpg',100, 20);
-    //this.creatureService.createCreature("scooby-doo",'apps/image/scooby.jpg',80, 30);  
-    //this.creatureService.createCreature("brian",'apps/image/brian.png',60, 20);  
+    this.creatureService.createCreature("droopy",'apps/image/droopy.jpg',100, 20);
+    this.creatureService.createCreature("scooby-doo",'apps/image/scooby.jpg',80, 30);  
+    this.creatureService.createCreature("brian",'apps/image/brian.png',60, 20);  
     this.creatureService.createCreature("clembapt",'apps/image/brian.png',60, 20);
   }
 

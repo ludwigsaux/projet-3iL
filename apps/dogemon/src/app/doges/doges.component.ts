@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Doge } from '../doge';
-import { DOGES } from '../mock-doges';
 import { DogeService } from '../doge.service';
 
 @Component({
