@@ -24,7 +24,7 @@
  body {
    margin: 2em;
  }
- body, input[type="text"], button {
+ body, input[type="text"], input[type="password"], button {
    color: #333;
    font-family: Cambria, Georgia, serif;
  }

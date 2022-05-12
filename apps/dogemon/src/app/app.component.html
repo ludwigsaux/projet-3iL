@@ -8,26 +8,22 @@
  -->
 
  <nav>
-  <ul class="navbar-nav ml-auto">
-     <li class="nav-item active">
-        <a class="nav-link" href="#">Home
+
+        <!-- <a class="nav-link" href="#"><button>Home
            <span class="sr-only" routerLink="/">(current)</span>
+        </button>
+        </a> -->
 
-        </a>
-     </li>
-     <li class="nav-item">
 
-        <a class="nav-link" href="#">A propos</a>
-     </li>
-     <li class="nav-item">
+        <a class="nav-link" href="#"><button>A propos</button></a>
+
                  <div *ngIf="isUserLoggedIn; else isLogOut">
-                       <a class="nav-link" routerLink="/logout">Se déconnecter</a>
+                       <a class="nav-link" routerLink="/logout"><button>Se déconnecter</button></a>
                  </div>
 
                  <ng-template #isLogOut>
-                             <a class="nav-link" routerLink="/login">Se connecter</a>
+                             <a class="nav-link" routerLink="/login"><button>Se connecter</button></a>
                  </ng-template>
-     </li>
-  </ul>
+  
  </nav>
 <router-outlet></router-outlet>

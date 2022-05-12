@@ -19,8 +19,8 @@ export class LoginComponent implements OnInit {
 
    ngOnInit() {
       this.formData = new FormGroup({
-         userName: new FormControl("admin"),
-         password: new FormControl("admin"),
+         userName: new FormControl(""),
+         password: new FormControl(""),
       });
    }
 
@@ -35,7 +35,7 @@ export class LoginComponent implements OnInit {
          .subscribe( (data: string) => { 
             console.log("Is Login Success: " + data); 
       
-           if(data) this.router.navigate(['/expenses']); 
+           if(data) this.router.navigate(['/main-menu']); 
       });
    }
 }
