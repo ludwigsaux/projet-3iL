@@ -1,13 +1,13 @@
 <h2>les dogos</h2>
 <ul class="doges">
-  <li *ngFor="let doge of doges">
-    <img class="image" src="{{doge.imagePath}}">
-    <button [class.selected]="doge === selectedDoge" type="button" (click)="onSelect(doge)">
-      <span class="badge">{{doge.idCreature}}</span>
-      <span class="name">{{doge.nameCreature}}</span>
-      <img class="image" src="{{doge.imagePath}}">
-    </button>
-  </li>
+  <label *ngFor="let doge of doges">
+        <div class="style">
+          <button [class.selected]="doge === selectedDoge" type="button" (click)="onSelect(doge)">
+          <img class="image" src="{{doge.imagePath}}">
+          <span class="name">{{doge.nameCreature}}</span>
+        </button>
+      </div>
+</label>
 </ul>
 
 <app-doge-detail [doge]="selectedDoge"></app-doge-detail>
