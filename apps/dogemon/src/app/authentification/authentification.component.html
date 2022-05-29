@@ -1,10 +1,19 @@
-<label>Nom d'utilisateur :</label><br/>
-<input type="text" id="username" name="username" required
-        size="10"><br/>
-<label>Mot de passe :</label><br/>
-<input type="text" id="password" name="password" required
-        size="10"><br/>
-<nav>
-    <a routerLink="/main-menu" routerLinkActive="active"><button>Connexion</button></a>
-    <a routerLink="/inscription" routerLinkActive="active"><button>S'inscrire</button></a>
-</nav>
+<div class="page">
+        <label class="field field_v1">
+          <input class="field__input" placeholder="e.g. Stanislav" required>
+          <span class="field__label-wrap">
+            <span class="field__label">Username : </span>
+          </span>
+        </label>
+        <label class="field field_v2">
+          <input class="field__input" placeholder="e.g. Password123" required>
+          <span class="field__label-wrap">
+            <span class="field__label">Password :</span>
+          </span>
+        </label>    
+</div>
+
+<div class="bn40div">
+    <a class="bn41" routerLink="/main-menu" routerLinkActive="active">Connexion</a>
+    <a class="bn41" routerLink="/inscription" routerLinkActive="active">S'inscrire</a>
+</div>

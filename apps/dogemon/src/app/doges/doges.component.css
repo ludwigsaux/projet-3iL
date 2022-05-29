@@ -1,4 +1,13 @@
 /* HeroesComponent's private CSS styles */
+ 
+  a:link { text-decoration: none; }
+
+  a:visited { text-decoration: none; }
+
+  a:hover { text-decoration: none; }
+
+  a:active { text-decoration: none; }
+
   .doges{
     display: flex;
 	  flex-direction: row;
@@ -6,9 +15,12 @@
 	  justify-content: space-evenly;
 	  align-items: center;
 	  align-content: center;
-    background-color: #f3f6fa;
+    background-color: #3d3d3d;
     margin-left: 20%;
     margin-right: 20%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    border-radius: 20px;
   }
 
   .doges li {
@@ -33,9 +45,7 @@
   }
   
   .doges button:hover {
-    /*background-color: blue;*/
-    border-width: 4px;
-    zoom: 100%;
+    background-color: beige;
   }
   
   .doges button:active {
@@ -64,7 +74,8 @@
     color: white;
     padding: 0.6em;
     background-color: #405061;
-    
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-transform: uppercase;
     line-height: 1em;
     width: 100px;
   }
@@ -72,4 +83,60 @@
   .image{
     width:200;
     height: 100px;
+  }
+
+  @font-face {
+    font-family: "LittleFace";
+    src: local("LittleFace"), url(/assets/fonts/LittleFaceBlack.ttf) format("truetype");
+}
+
+  .titre {
+    font-family: LittleFace;
+    color: #EEE;
+    font-size: 3em;
+    text-align: center;
+  }
+
+  .bn40 {
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: large;
+    padding: 4px 6px;
+    color: #fff !important;
+  }
+  
+  .bn40::after {
+    max-width: 90px;
+    height: 2px;
+    display: block;
+    content: "";
+    background: linear-gradient(-90deg, #ff9100 0%, #f10366 50%, #6173ff 100%);
+    opacity: 1;
+  }
+
+  .bn41 {
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: large;
+    padding: 4px 6px;
+    color: #fff !important;
+  }
+  
+  .bn41::after {
+    max-width: 90px;
+    height: 2px;
+    display: block;
+    content: "";
+    background: linear-gradient(130deg, #00e2ff, #89ff00);
+    opacity: 1;
+  }
+  
+  .bn40div {
+    display: flex;
+	  flex-direction: row;
+	  flex-wrap: nowrap;
+	  justify-content: space-around;
+	  align-items: center;
+	  align-content: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
   }

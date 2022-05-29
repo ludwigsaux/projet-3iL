@@ -1,4 +1,5 @@
-<h2>les dogos</h2>
+<body>
+<p class="titre">Les Dogémon</p>
 <ul class="doges">
   <label *ngFor="let doge of doges">
         <div class="style">
@@ -12,6 +13,9 @@
 
 <app-doge-detail [doge]="selectedDoge"></app-doge-detail>
 
-<nav>
-    <a routerLink="/main-menu" routerLinkActive="active"><button>retour</button></a>
-</nav>
+
+<div class="bn40div">
+  <a class="bn40" routerLink="/main-menu" routerLinkActive="active">RETOUR</a>
+  <a class="bn41" routerLink="/main-menu" routerLinkActive="active">VALIDÉ</a>
+</div>
+</body>
