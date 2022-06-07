@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { FormGroup, FormControl } from '@angular/forms';
+import { AuthService } from '../auth.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-authentification',
@@ -7,9 +10,33 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AuthentificationComponent implements OnInit {
 
-  constructor() { }
+   userName!: string;
+   password!: string;
+   formData!: FormGroup;
+ 
+  constructor(private authService : AuthService, private router : Router) { }
 
-  ngOnInit(): void {
+  ngOnInit(){
+      this.formData = new FormGroup({
+      
+
+    });
   }
+
+  onClickSubmit(data: { userName: string; password: string; }) {
+    this.userName = data.userName;
+    this.password = data.password;
+
+    console.log("Login page: " + this.userName);
+    console.log("Login page: " + this.password);
+
+    this.authService.login(this.userName, this.password)
+       .subscribe( (data: string) => { 
+          console.log("Is Login Success: " + data); 
+    
+         if(data) this.router.navigate(['/main-menu']); 
+    });
+ }
+
 
 }

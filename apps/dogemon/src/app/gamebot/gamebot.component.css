@@ -38,7 +38,58 @@ h1 {
     cursor: auto;
   }
   
-  /* everywhere else */
-  * {
-    font-family: Arial, Helvetica, sans-serif;
+  @font-face {
+    font-family: "LittleFace";
+    src: local("LittleFace"), url(/assets/fonts/LittleFaceBlack.ttf) format("truetype");
+}
+
+  .titre {
+    font-family: LittleFace;
+    color: #EEE;
+    font-size: 3em;
+    text-align: center;
+  }
+
+  .bn40 {
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: large;
+    padding: 4px 6px;
+    color: #fff !important;
+  }
+  
+  .bn40::after {
+    max-width: 90px;
+    height: 2px;
+    display: block;
+    content: "";
+    background: linear-gradient(-90deg, #ff9100 0%, #f10366 50%, #6173ff 100%);
+    opacity: 1;
+  }
+
+  .bn41 {
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: large;
+    padding: 4px 6px;
+    color: #fff !important;
+  }
+  
+  .bn41::after {
+    max-width: 90px;
+    height: 2px;
+    display: block;
+    content: "";
+    background: linear-gradient(130deg, #00e2ff, #89ff00);
+    opacity: 1;
+  }
+  
+  .bn40div {
+    display: flex;
+	  flex-direction: row;
+	  flex-wrap: nowrap;
+	  justify-content: space-around;
+	  align-items: center;
+	  align-content: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
   }
