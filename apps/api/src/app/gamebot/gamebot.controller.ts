@@ -22,17 +22,20 @@ export class GamebotController {
 
   @Get('test')
   async getFightersData() {
-    var creatureId=this.usersService.getCreature("admin")
-    var test=this.creatureService.getOneById(creatureId)
-
+    
     var creature:Creature;
-    await test.then((returnedCreature)=>{
-      creature = returnedCreature;
-      console.log(">>>>> creature dedans : ", creature);
-    });
-    test.catch();
+    
+    await this.usersService.getUser("admin").then((user:User) => {
+      var test=this.creatureService.getOneById(user.dogemon);
 
-    console.log(">>>>> creature après : ", creature);
+      test.then((returnedCreature)=>{
+        creature = returnedCreature;
+        console.log(">>>>> creature dedans : ", creature);
+      });
+      test.catch();
+
+      console.log(">>>>> creature après : ", creature);
+    });
     return creature;
-  }
+  } 
 }

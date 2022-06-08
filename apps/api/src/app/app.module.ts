@@ -14,6 +14,7 @@ import { CompetenceService } from './competence/competence.service';
 import { User } from './user.entity';
 import { GamebotController } from './gamebot/gamebot.controller';
 import { UsersService } from './users/users.service';
+import { UsersController } from './users/users.controller';
 
 @Module({
   imports: [
@@ -22,7 +23,7 @@ import { UsersService } from './users/users.service';
       TypeOrmModule.forFeature([Competence]),
       TypeOrmModule.forFeature([User])
   ],
-  controllers: [AppController, CreatureController, CompetenceController, GamebotController],
+  controllers: [AppController, CreatureController, CompetenceController, GamebotController,UsersController],
   providers: [AppService, CreatureService, CompetenceService, UsersService],
 })
 export class AppModule {}

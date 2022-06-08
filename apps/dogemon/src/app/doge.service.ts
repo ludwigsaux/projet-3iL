@@ -11,6 +11,8 @@ export class DogeService {
 
   private dogesUrl='http://localhost:4000/api/creatures';
 
+  private changeDoges='http://localhost:4000/api/Users/changeCreature';
+
   constructor(
     private http: HttpClient
   ) { }
@@ -19,6 +21,13 @@ export class DogeService {
     //const doges = of(DOGES);
     //return doges;
     return this.http.get<Doge[]>(this.dogesUrl)
+  }
+
+
+  modifyDoges(doge): Observable<void>{
+    //const doges = of(DOGES);
+    //return doges;
+    return this.http.put<void>(this.changeDoges, doge);
   }
 
 }

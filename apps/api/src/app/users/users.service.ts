@@ -1,37 +1,34 @@
 import { Injectable } from '@nestjs/common';
+import { InjectRepository } from '@nestjs/typeorm';
+import { Repository } from 'typeorm';
+import { Creature } from '../creature.entity';
+import { User } from '../user.entity';
 
-export type User = any;
 
 @Injectable()
 export class UsersService {
   private readonly users: User[];
 
-  constructor() {
-    this.users = [
-      {
-        userId: 1,
-        username: 'joueur1',
-        password: 'securite',
-      },
-      {
-        userId: 2,
-        username: 'joueur2',
-        password: 'security',
-      },
-      {
-        userId: 3,
-        username: 'joueur3',
-        password: 'safety',
-      },
-    ];
-  }
+  constructor( @InjectRepository(User)
+  private userRepository: Repository<User>)
+  {} 
+  
+
 
   async findOne(username: string): Promise<User | undefined> {
     return this.users.find(user => user.username === username);
   }
 
-  getCreature(username:string){
-    return this.users.find(user => user.dogemon);
-  }
+  getUser(username:string): Promise<User | undefined>{
+    return this.userRepository.findOneOrFail(username)
+}
   
+  changeCreature(creatureId:number){
+    this.getUser('1').then((user:User) => {
+      user.dogemon = creatureId;
+      
+     this.userRepository.save(user);
+     console.log("user saved : ", user);
+    });
+  }
 }

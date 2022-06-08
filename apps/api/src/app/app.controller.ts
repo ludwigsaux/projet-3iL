@@ -22,5 +22,9 @@ export class AppController {
     return this.appService.getData();
   }
 
+  truc(){
+    console.log('test')
+  }
+
 
 }
