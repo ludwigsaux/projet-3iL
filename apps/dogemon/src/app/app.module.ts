@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
-import { ReactiveFormsModule } from '@angular/forms'; 
+import { ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AuthentificationComponent } from './authentification/authentification.component';
@@ -11,7 +11,13 @@ import { DogeDetailComponent } from './doge-detail/doge-detail.component';
 import { InscriptionComponent } from './inscription/inscription.component';
 import { GameComponent } from './game/game.component';
 import { GamebotComponent } from './gamebot/gamebot.component';
-import { HttpClient,HttpClientModule,HttpHeaders } from '@angular/common/http';
+import {
+  HttpClient,
+  HttpClientModule,
+  HttpHeaders,
+} from '@angular/common/http';
+import { IndexComponent } from './index/index.component';
+import { CombatComponent } from './combat/combat.component';
 
 @NgModule({
   declarations: [
@@ -22,10 +28,18 @@ import { HttpClient,HttpClientModule,HttpHeaders } from '@angular/common/http';
     DogeDetailComponent,
     InscriptionComponent,
     GamebotComponent,
-    GameComponent
+    GameComponent,
+    IndexComponent,
+    CombatComponent,
   ],
-  
-  imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule, ReactiveFormsModule ],
+
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    FormsModule,
+    HttpClientModule,
+    ReactiveFormsModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })

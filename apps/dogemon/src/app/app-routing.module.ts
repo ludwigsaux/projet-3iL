@@ -8,6 +8,7 @@ import { GameComponent } from './game/game.component';
 import { InscriptionComponent } from './inscription/inscription.component';
 import { AuthGuard } from './auth.guard';
 import { DeconnexionComponent } from './deconnexion/deconnexion.component';
+import { CombatComponent } from './combat/combat.component';
 
 const routes: Routes = [
   {path: 'main-menu', component: MainMenuComponent, canActivate: [AuthGuard]},
@@ -17,6 +18,7 @@ const routes: Routes = [
   {path: 'doges', component: DogesComponent},
   {path: 'game', component: GameComponent},
   {path: 'gamebot', component: GamebotComponent},
+  {path: 'combat', component: CombatComponent},
   // otherwise redirect to home
   // { path: '', redirectTo: 'main-menu', pathMatch: 'full' }
 ];

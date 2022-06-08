@@ -1,0 +1,21 @@
+<label for="file">{{creatureEnnemi}}</label>
+<progress id="file" max="100" value="{{pvCreatureEnnemi}}"></progress><div class="button">
+
+<label for="file">{{nomNotreCreature}}</label>
+<progress id="file" max="100" value="{{pvNotreCreature}}"></progress>{{pvNotreCreature}}/{{pvMaxNotreCreature}}<br/>
+
+<textarea readonly>
+   {{champInformation}}
+</textarea> 
+
+<div class="button">
+    <button type="submit">Attaque</button>
+</div>
+
+<div class="button">
+    <button type="submit" (click)="sac()">Sac</button>
+</div>
+
+<div class="button">
+    <button type="submit" (click)="fuite()">Fuite</button>
+</div>
