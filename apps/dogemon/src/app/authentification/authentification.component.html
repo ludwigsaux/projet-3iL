@@ -2,14 +2,14 @@
 <!-- Page Content -->
 <form [formGroup]="formData" (ngSubmit)="onClickSubmit(formData.value)" class="form-signin">
   <div class="page">
-    <label class="field field_v1">
-      <input class="field__input" placeholder="e.g. Stanislav" id="userName" formControlName="userName" required autofocus>
+    <label class="field field_v1" formGroupName="userName"> 
+      <input class="field__input" placeholder="e.g. Stanislav" id="userName" formControlName="userName" required>
       <span class="field__label-wrap">
         <span class="field__label">Username : </span>
       </span>
     </label>
     
-    <label class="field field_v2">
+    <label class="field field_v2" formGroupName="password">
       <input class="field__input" placeholder="e.g. Password123" id="password" type="password" formControlName="password" required>
       <span class="field__label-wrap">
         <span class="field__label">Password :</span>
@@ -18,9 +18,8 @@
   </div>
                              
   <div class="bn40div">
-
     <a class="bn41" type="submit" routerLink="/main-menu" routerLinkActive="active">Connexion</a>
-    <!-- <a class="bn41" routerLink="/inscription" routerLinkActive="active">S'inscrire</a> -->
+    <a class="bn41" routerLink="/register" routerLinkActive="active">S'inscrire</a>
   </div>  
 
 </form>

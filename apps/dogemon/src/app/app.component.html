@@ -1,6 +1,6 @@
 
 <nav>
-        <a class="nav-link" href="#">A&nbsp;PROPOS</a>
+       
 
                  <div *ngIf="isUserLoggedIn; else isLogOut">
                      <a routerLink="/deconnexion" routerLinkActive="active">DECONNEXION</a>
@@ -9,6 +9,8 @@
                  <ng-template #isLogOut>
                      <a routerLink="/authentification" routerLinkActive="active">CONNEXION</a>
                  </ng-template>
+
+                 <a class="nav-link" href="#">A&nbsp;PROPOS</a>
 
 </nav>
 <hr>
