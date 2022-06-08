@@ -19,8 +19,7 @@ export class GamebotController {
   findAll(): string {
     return 'This action returns all games against a bot';
   }
-
-  @Get('test')
+  
   async getFightersData() {
     
     var creature:Creature;

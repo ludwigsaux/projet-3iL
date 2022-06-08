@@ -11,6 +11,7 @@ export class DogesComponent implements OnInit {
 
   doges: Doge[] = [];
   selectedDoge?: Doge;
+  clicked:boolean =false;
 
   constructor(private dogeService: DogeService) { }
 
@@ -30,7 +31,7 @@ export class DogesComponent implements OnInit {
 
   onClick():void{
     console.log("On click",this.selectedDoge);
-    this.dogeService.modifyDoges(this.selectedDoge).subscribe();
+    this.dogeService.modifyDoges(this.selectedDoge).subscribe(() => this.clicked = true);
   }
 
 }

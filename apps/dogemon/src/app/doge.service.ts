@@ -23,11 +23,9 @@ export class DogeService {
     return this.http.get<Doge[]>(this.dogesUrl)
   }
 
-
   modifyDoges(doge): Observable<void>{
     //const doges = of(DOGES);
     //return doges;
     return this.http.put<void>(this.changeDoges, doge);
   }
-
 }

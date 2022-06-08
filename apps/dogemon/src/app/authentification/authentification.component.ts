@@ -34,7 +34,7 @@ export class AuthentificationComponent implements OnInit {
        .subscribe( (data: string) => { 
           console.log("Is Login Success: " + data); 
     
-         if(data) this.router.navigate(['/main-menu']); 
+         
     });
  }
 
