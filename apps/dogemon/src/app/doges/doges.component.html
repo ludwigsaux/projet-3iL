@@ -2,7 +2,7 @@
 <p class="titre">Les Dogémon</p>
 <ul class="doges">
   <label *ngFor="let doge of doges">
-        <div class="style">
+        <div class="style" >
           <button [class.selected]="doge === selectedDoge" type="button" (click)="onSelect(doge)">
           <img class="image" src="{{doge.imagePath}}">
           <span class="name">{{doge.nameCreature}}</span>
@@ -16,6 +16,6 @@
 
 <div class="bn40div">
   <a class="bn40" routerLink="/main-menu" routerLinkActive="active">RETOUR</a>
-  <a class="bn41" routerLink="/main-menu" routerLinkActive="active">VALIDÉ</a>
+  <a class="bn41" type="button" (click)="onClick()">VALIDÉ</a>
 </div>
 </body>

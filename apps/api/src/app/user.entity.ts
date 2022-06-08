@@ -16,4 +16,7 @@ export class User {
 
     @Column()
     number_win: number;
+
+    @Column()
+    dogemon: number;
 }

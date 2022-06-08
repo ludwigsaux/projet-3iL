@@ -20,11 +20,17 @@ export class DogesComponent implements OnInit {
 
   onSelect(doge: Doge): void {
     this.selectedDoge = doge;
+    console.log(this.selectedDoge)
   }
 
   getDoges():void{
     this.dogeService.getDoges()
       .subscribe(doges => this.doges = doges);
+  }
+
+  onClick():void{
+    console.log("On click",this.selectedDoge);
+    this.dogeService.modifyDoges(this.selectedDoge).subscribe();
   }
 
 }
