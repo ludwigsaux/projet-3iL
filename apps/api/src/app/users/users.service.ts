@@ -29,4 +29,9 @@ export class UsersService {
   async findOne(username: string): Promise<User | undefined> {
     return this.users.find(user => user.username === username);
   }
+
+  getCreature(username:string){
+    return this.users.find(user => user.dogemon);
+  }
+  
 }

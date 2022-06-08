@@ -20,11 +20,5 @@ export class Creature {
     armorCreature: number;
 
     @Column()
-    firstSkill: string;
-
-    @Column()
-    secondSkill: string;
-
-    @Column()
-    thirdSkill: string;
+    firstSkill: number;
 }

@@ -23,8 +23,8 @@ export class CreatureService {
       return this.creatureRepository.findOneOrFail(nameCreature)
   }
 
-  createCreature(nameCreature:string,imagePath: string, hpCreature:number, armorCreature: number): Promise<Creature>{
-    const newCreature = this.creatureRepository.create({nameCreature,imagePath, hpCreature, armorCreature});
+  createCreature(nameCreature:string,imagePath: string, hpCreature:number, armorCreature: number, firstSkill: number): Promise<Creature>{
+    const newCreature = this.creatureRepository.create({nameCreature,imagePath, hpCreature, armorCreature, firstSkill});
     return this.creatureRepository.save(newCreature)
   }
     

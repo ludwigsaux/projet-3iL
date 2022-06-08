@@ -11,14 +11,18 @@ import { CreatureService } from './creature/creature.service';
 import { Competence } from './competence.entity';
 import { CompetenceController } from './competence/competence.controller';
 import { CompetenceService } from './competence/competence.service';
+import { User } from './user.entity';
+import { GamebotController } from './gamebot/gamebot.controller';
+import { UsersService } from './users/users.service';
 
 @Module({
   imports: [
       TypeOrmModule.forRoot(config), 
       TypeOrmModule.forFeature([Creature]),
-      TypeOrmModule.forFeature([Competence])
+      TypeOrmModule.forFeature([Competence]),
+      TypeOrmModule.forFeature([User])
   ],
-  controllers: [AppController, CreatureController, CompetenceController],
-  providers: [AppService, CreatureService, CompetenceService],
+  controllers: [AppController, CreatureController, CompetenceController, GamebotController],
+  providers: [AppService, CreatureService, CompetenceService, UsersService],
 })
 export class AppModule {}
