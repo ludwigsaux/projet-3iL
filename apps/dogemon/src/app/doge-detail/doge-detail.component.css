@@ -1,14 +1,22 @@
+   body{
+     display: flex;
+     flex-direction: row;
+     flex-wrap: wrap;
+     justify-content: center;
+     align-items: center;
+   }
    .container { 
     display: flex;
-	flex-direction: column;
-	flex-wrap: nowrap;
-	justify-content: center;
-	align-items: center;
-	align-content: stretch;
+	  flex-direction: column;
+	  flex-wrap: nowrap;
+	  justify-content: center;
+	  align-items: center;
+	  align-content: stretch;
     width: 30vh;
     border: solid black;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
+    background-color: aliceblue;
     
   }
   
@@ -21,10 +29,10 @@
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
     display: flex;
-	flex-direction: column;
-	flex-wrap: nowrap;
-	justify-content: center;
-	align-items: center;
+	  flex-direction: column;
+	  flex-wrap: nowrap;
+	  justify-content: center;
+	  align-items: center;
     align-content: stretch;
     width: 30vh;
     padding-top: 5%;
@@ -42,6 +50,15 @@
     padding-top: 5%; }
 
   .e5 { grid-area: e5;
+    padding-top: 5%; }
+
+  .e6 { grid-area: e6;
+    padding-top: 5%; }
+
+    .e7 { grid-area: e7;
+      padding-top: 5%; }
+
+  .e8 { grid-area: e8;
     padding-top: 5%;
     width:auto;
     height: 200px; }
