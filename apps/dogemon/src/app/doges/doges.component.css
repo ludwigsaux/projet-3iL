@@ -141,3 +141,11 @@
 	  align-content: center;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
   }
+
+  .text{
+    color: aliceblue;
+  text-align: center;
+  text-decoration: none;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: bold;
+  }

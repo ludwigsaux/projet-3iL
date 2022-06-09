@@ -1,95 +1,14 @@
-h1 {
-    color: #369;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 250%;
-    text-align: center;
-  }
-  h2, h3 {
-    color: #444;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: lighter;
-  }
-  body {
-    margin: 2em;
-  }
-  body, input[type="text"], button {
-    color: #333;
-    font-family: Cambria, Georgia, serif;
-  }
-  button {
-    background-color: #eee;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    color: black;
-    font-size: 1.2rem;
-    padding: 1rem;
-    margin-right: 1rem;
-    margin-bottom: 1rem;
-    margin-top: 1rem;
-  }
-  button:hover {
-    background-color: black;
-    color: white;
-  }
-  button:disabled {
-    background-color: #eee;
-    color: #aaa;
-    cursor: auto;
-  }
-  
-  @font-face {
-    font-family: "LittleFace";
-    src: local("LittleFace"), url(/assets/fonts/LittleFaceBlack.ttf) format("truetype");
+
+.list{
+  color:aliceblue;
+  text-align: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-  .titre {
-    font-family: LittleFace;
-    color: #EEE;
-    font-size: 3em;
-    text-align: center;
-  }
-
-  .bn40 {
-    border-radius: 4px;
-    font-weight: 600;
-    font-size: large;
-    padding: 4px 6px;
-    color: #fff !important;
-  }
-  
-  .bn40::after {
-    max-width: 90px;
-    height: 2px;
-    display: block;
-    content: "";
-    background: linear-gradient(-90deg, #ff9100 0%, #f10366 50%, #6173ff 100%);
-    opacity: 1;
-  }
-
-  .bn41 {
-    border-radius: 4px;
-    font-weight: 600;
-    font-size: large;
-    padding: 4px 6px;
-    color: #fff !important;
-  }
-  
-  .bn41::after {
-    max-width: 90px;
-    height: 2px;
-    display: block;
-    content: "";
-    background: linear-gradient(130deg, #00e2ff, #89ff00);
-    opacity: 1;
-  }
-  
-  .bn40div {
-    display: flex;
-	  flex-direction: row;
-	  flex-wrap: nowrap;
-	  justify-content: space-around;
-	  align-items: center;
-	  align-content: center;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-  }
+.text{
+  color: aliceblue;
+  text-align: center;
+  text-decoration: none;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: bold;
+}
