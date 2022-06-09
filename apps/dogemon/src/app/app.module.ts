@@ -8,13 +8,13 @@ import { AuthentificationComponent } from './authentification/authentification.c
 import { MainMenuComponent } from './main-menu/main-menu.component';
 import { DogesComponent } from './doges/doges.component';
 import { DogeDetailComponent } from './doge-detail/doge-detail.component';
-import { InscriptionComponent } from './inscription/inscription.component';
 import { GameComponent } from './game/game.component';
 import { GamebotComponent } from './gamebot/gamebot.component';
 import {
   HttpClient,
   HttpClientModule,
   HttpHeaders,
+  HTTP_INTERCEPTORS,
 } from '@angular/common/http';
 import { IndexComponent } from './index/index.component';
 import { CombatComponent } from './combat/combat.component';
@@ -26,7 +26,6 @@ import { CombatComponent } from './combat/combat.component';
     MainMenuComponent,
     DogesComponent,
     DogeDetailComponent,
-    InscriptionComponent,
     GamebotComponent,
     GameComponent,
     IndexComponent,
@@ -40,7 +39,9 @@ import { CombatComponent } from './combat/combat.component';
     HttpClientModule,
     ReactiveFormsModule,
   ],
-  providers: [],
+  providers: [
+
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

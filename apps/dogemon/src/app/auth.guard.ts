@@ -21,12 +21,14 @@ export class AuthGuard implements CanActivate {
       checkLogin(url: string): true | UrlTree {
          console.log("Url: " + url)
          const val = localStorage.getItem('isUserLoggedIn');
-       
-         if( val ) {
-           return url === '/authentification' ? this.router.parseUrl('/main-menu'): true;
+
+         if(val != null && val == "true"){
+            if(url == "/login")
+               return this.router.parseUrl('/main-menu');
+            else 
+               return true;
          } else {
-           return this.router.parseUrl('/authentification');
+            return this.router.parseUrl('/login');
          }
-       }
-         
       }
+}

@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { AuthService } from './auth.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'dogemon-root',
@@ -11,10 +12,10 @@ export class AppComponent {
   title = 'Dogemon';
   isUserLoggedIn = false;
 
-   constructor(private authService: AuthService) {}
+  constructor(private authService: AuthService) {}
 
    ngOnInit() {
-      let storeData = localStorage.getItem("isUserLoggedIn");
+      const storeData = localStorage.getItem("isUserLoggedIn");
       console.log("StoreData: " + storeData);
 
       if( storeData != null && storeData == "true")
@@ -24,4 +25,5 @@ export class AppComponent {
 
          this.isUserLoggedIn = false;
    }
+
 }
