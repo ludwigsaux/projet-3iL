@@ -19,6 +19,7 @@ import {
 import { IndexComponent } from './index/index.component';
 import { CombatComponent } from './combat/combat.component';
 import { AproposComponent } from './apropos/apropos.component';
+import { GameBotService } from './gamebot.service';
 
 @NgModule({
   declarations: [
@@ -42,7 +43,7 @@ import { AproposComponent } from './apropos/apropos.component';
     HttpClientModule,
     ReactiveFormsModule,
   ],
-  providers: [],
+  providers: [GameBotService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
