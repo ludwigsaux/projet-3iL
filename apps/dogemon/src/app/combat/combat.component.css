@@ -1,0 +1,119 @@
+.box{
+    width: 30vw;
+    display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+}
+
+.box2{
+    width: 30vw;
+    display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+}
+
+.image{
+    height: 200px;
+    width: auto;
+}
+
+.style{
+    display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	align-content: flex-start;
+
+}
+
+.test{
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: stretch;
+	align-content: center;
+    background-color: azure;
+    width: 80vw;
+}
+
+    /* For Chrome or Safari */
+    .player::-webkit-progress-bar {
+        background-color: #eeeeee;
+    }
+
+    .player::-webkit-progress-value {
+        background-color: blue !important;
+    }
+
+    /* For Chrome or Safari */
+    .ennemi::-webkit-progress-bar {
+        background-color: #eeeeee;
+    }
+
+    .ennemi::-webkit-progress-value {
+        background-color: red !important;
+    }
+
+    /* For IE10 */
+    .player {
+        background-color: #eee;
+    }
+
+    .player {
+        background-color: blue;
+    }
+
+     /* For IE10 */
+     .ennemi {
+        background-color: #eee;
+    }
+
+    .ennemi {
+        background-color: red;
+    }
+
+    .message{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        background-color: azure;
+        width: 80vw;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .textbox{
+        width: 60vw;
+       
+    }
+
+    .action{
+        padding-top: 30px;
+        padding-bottom: 30px;
+        display: flex;
+	    flex-direction: row;
+	    flex-wrap: wrap;
+	    justify-content: space-around;
+	    align-items: center;
+	    align-content: center;
+        width: 80vw;
+        margin-left: auto;
+        margin-right: auto;
+        background-color: azure;
+    }
+
+    textarea {
+        resize: none;
+      }

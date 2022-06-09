@@ -18,6 +18,8 @@ import {
 } from '@angular/common/http';
 import { IndexComponent } from './index/index.component';
 import { CombatComponent } from './combat/combat.component';
+import { AproposComponent } from './apropos/apropos.component';
+import { GameBotService } from './gamebot.service';
 
 @NgModule({
   declarations: [
@@ -30,6 +32,7 @@ import { CombatComponent } from './combat/combat.component';
     GameComponent,
     IndexComponent,
     CombatComponent,
+    AproposComponent,
   ],
 
   imports: [
@@ -39,9 +42,7 @@ import { CombatComponent } from './combat/combat.component';
     HttpClientModule,
     ReactiveFormsModule,
   ],
-  providers: [
-
-  ],
+  providers: [GameBotService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
