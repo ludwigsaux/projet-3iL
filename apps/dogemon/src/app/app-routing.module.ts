@@ -18,7 +18,7 @@ const routes: Routes = [
   {path: 'game', component: GameComponent},
   {path: 'gamebot', component: GamebotComponent},
   {path: 'combat', component: CombatComponent},
-  {path: 'apropos', component: AproposComponent}
+  {path: 'apropos', component: AproposComponent},
   // otherwise redirect to home
   { path: '', redirectTo: 'main-menu', pathMatch: 'full' }
 ];
