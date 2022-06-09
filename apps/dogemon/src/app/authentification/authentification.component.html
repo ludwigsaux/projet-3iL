@@ -1,10 +1,35 @@
-<label>Nom d'utilisateur :</label><br/>
-<input type="text" id="username" name="username" required
-        size="10"><br/>
-<label>Mot de passe :</label><br/>
-<input type="text" id="password" name="password" required
-        size="10"><br/>
-<nav>
-    <a routerLink="/main-menu" routerLinkActive="active"><button>Connexion</button></a>
-    <a routerLink="/inscription" routerLinkActive="active"><button>S'inscrire</button></a>
-</nav>
+
+<!-- Page Content -->
+<form [formGroup]="formData" (ngSubmit)="onSubmit()" class="form-signin">
+  <div class="page">
+    <label class="field field_v1" formGroupName="userName"> 
+      <input class="field__input" placeholder="e.g. Stanislav" id="userName" [ngClass]="{ 'is-invalid': submitted && f.userName.errors }">
+      <span class="field__label-wrap">
+        <span class="field__label">Login : </span>
+      </span>
+    </label>
+    <div *ngIf="submitted && f.userName.errors" class="invalid-feedback">
+      <div *ngIf="f.userName.errors.required">Username is required</div>
+    </div>
+    
+    <label class="field field_v2" formGroupName="password">
+      <input class="field__input" placeholder="e.g. Password123" id="password" type="password" [ngClass]="{ 'is-invalid': submitted && f.password.errors }">
+      <span class="field__label-wrap">
+        <span class="field__label">Mot de passe :</span>
+      </span>
+    </label>
+    <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+      <div *ngIf="f.password.errors.required">Password is required</div>
+    </div>
+  </div>
+                             
+  <div class="bn40div">
+    <button class="bn41" type="submit">CONNEXION</button>
+    <a class="bn41" routerLink="/inscription" routerLinkActive="active">S'inscrire</a>
+  </div>  
+
+</form>
+
+
+
+

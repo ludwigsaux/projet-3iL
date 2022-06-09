@@ -1,29 +1,15 @@
-<h1>{{title}}</h1>
-<!-- <hr>
-<nav>
-  <a routerLink="/authentification" routerLinkActive="active"><button>Connexion</button></a>
-  <button>A propos</button>
+
+<nav>     
+    <div *ngIf="isUserLoggedIn; else isLogOut">
+        <a routerLink="/deconnexion" routerLinkActive="active">DECONNEXION</a>
+    </div>
+
+    <ng-template #isLogOut>
+        <a routerLink="/authentification" routerLinkActive="active">CONNEXION</a>
+    </ng-template>
+
+    <a class="nav-link" href="#">A&nbsp;PROPOS</a>
 </nav>
 <hr>
- -->
 
- <nav>
-
-        <!-- <a class="nav-link" href="#"><button>Home
-           <span class="sr-only" routerLink="/">(current)</span>
-        </button>
-        </a> -->
-
-
-        <a class="nav-link" href="#"><button>A propos</button></a>
-
-                 <div *ngIf="isUserLoggedIn; else isLogOut">
-                       <a class="nav-link" routerLink="/logout"><button>Se déconnecter</button></a>
-                 </div>
-
-                 <ng-template #isLogOut>
-                             <a class="nav-link" routerLink="/login"><button>Se connecter</button></a>
-                 </ng-template>
-  
- </nav>
 <router-outlet></router-outlet>

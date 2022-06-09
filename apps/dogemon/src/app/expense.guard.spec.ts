@@ -1,6 +1,5 @@
 import { TestBed } from '@angular/core/testing';
-
-import { ExpenseGuard } from './expense.guard';
+import { AuthGuard } from './auth.guard';
 
 describe('ExpenseGuard', () => {
   let guard: ExpenseGuard;
