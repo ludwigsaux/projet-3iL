@@ -1,30 +1,43 @@
-<label for="file">{{creatureEnnemi}}</label>
-<progress id="file" max="100" value="{{pvCreatureEnnemi}}"></progress><div class="button">
-
-<label for="file">{{nomNotreCreature}}</label>
-<progress id="file" max="100" value="{{pvNotreCreature}}"></progress>{{pvNotreCreature}}/{{pvMaxNotreCreature}}<br/>
-
-<textarea readonly>
-   {{champInformation}}
-</textarea> 
-
-<div class="button">
-    <button type="submit">Attaque</button>
-</div>
-
-<div class="button">
-    <button type="submit" (click)="sac()">Sac</button>
-</div>
-
-<div class="button">
-    <button type="submit" (click)="fuite()">Fuite</button>
-</div>
-
-<ul class="doge">
-    <label *ngFor="let doge of doges">
-          <div class="style" >
+<div class="test">
+    <div class="box">
+        <ul *ngIf="doge" class="doge">
+            <div class="style" >
             <img class="image" src="{{doge.imagePath}}">
             <span class="name">{{doge.nameCreature}}</span>
+            <progress class="player" id="file" max="100" value="{{pvNotreCreature}}"></progress>{{pvNotreCreature}}/{{doge.hpCreature}}<br/>
         </div>
-  </label>
-  </ul>
+        </ul>
+
+    </div>
+        <div class="box2">
+            <ul *ngIf="doge" class="doge">
+                <div class="style" >
+                <img class="image" src="{{doge.imagePath}}">
+                <span class="name">{{doge.nameCreature}}</span>
+                <progress class="ennemi" id="file" max="100" value="{{pvNotreCreature}}"></progress>{{pvNotreCreature}}/{{doge.hpCreature}}<br/>
+            </div>
+            </ul>
+        </div>
+    </div>
+<div class="message">
+    <textarea class="textbox" readonly>
+      {{champInformation}}
+    </textarea> 
+</div>
+<div class="action">
+    <div class="button">
+        <button type="submit">Attaque</button>
+    </div>
+
+    <div class="button">
+        <button type="submit" (click)="sac()">Sac</button>
+    </div>
+
+    <div class="button">
+        <button type="submit" (click)="fuite()">Fuite</button>
+    </div>
+</div>
+
+
+
+

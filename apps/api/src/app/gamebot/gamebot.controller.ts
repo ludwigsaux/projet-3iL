@@ -26,15 +26,10 @@ export class GamebotController {
     var creature:Creature;
     
     await this.usersService.getUser('1').then((user:User) => {
-      var test=this.creatureService.getOneById(user.dogemon);
-
-      test.then((returnedCreature)=>{
-        creature = returnedCreature;
-        console.log(">>>>> creature dedans : ", creature);
-      });
-      test.catch();
-
-      console.log(">>>>> creature après : ", creature);
+      return this.creatureService.getOneById(user.dogemon);
+    }).then((returnedCreature)=>{
+      creature = returnedCreature;
+      console.log(">>>>> creature dedans : ", creature);
     });
     return creature;
   } 

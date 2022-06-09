@@ -17,7 +17,7 @@ export class CombatComponent implements OnInit {
   pvCreatureEnnemi = 40;
   champInformation = "Début du combat ! ";
 
-  doges: Doge[] = [];
+  doge: Doge | undefined ;
 
   constructor(private gamebotService: GameBotService) {}
 
@@ -35,7 +35,7 @@ export class CombatComponent implements OnInit {
   }
 
   getDoges():void{
-    this.gamebotService.getDoges();
+    this.gamebotService.getDoges().subscribe((doge:Doge)=> this.doge = doge);
   }
 
 }
