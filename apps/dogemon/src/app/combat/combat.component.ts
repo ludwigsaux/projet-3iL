@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { GameBotService } from '../gamebot.service';
+import { Doge } from '../doge';
 
 @Component({
   selector: 'dogemon-combat',
@@ -15,9 +17,14 @@ export class CombatComponent implements OnInit {
   pvCreatureEnnemi = 40;
   champInformation = "Début du combat ! ";
 
-  constructor() {}
+  doges: Doge[] = [];
 
-  ngOnInit(): void {}
+  constructor(private gamebotService: GameBotService) {}
+
+  ngOnInit(): void {
+    this.getDoges();
+    console.log(this.getDoges())
+  }
 
   fuite(): void{
     this.champInformation = "Fuite impossible looser !"
@@ -26,4 +33,9 @@ export class CombatComponent implements OnInit {
   sac(): void{
     this.champInformation = "Aucun objet dans le sac !"
   }
+
+  getDoges():void{
+    this.gamebotService.getDoges();
+  }
+
 }

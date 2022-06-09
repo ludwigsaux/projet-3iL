@@ -19,3 +19,12 @@
 <div class="button">
     <button type="submit" (click)="fuite()">Fuite</button>
 </div>
+
+<ul class="doge">
+    <label *ngFor="let doge of doges">
+          <div class="style" >
+            <img class="image" src="{{doge.imagePath}}">
+            <span class="name">{{doge.nameCreature}}</span>
+        </div>
+  </label>
+  </ul>

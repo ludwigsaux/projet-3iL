@@ -11,7 +11,7 @@ import { DeconnexionComponent } from './deconnexion/deconnexion.component';
 import { CombatComponent } from './combat/combat.component';
 
 const routes: Routes = [
-  {path: 'main-menu', component: MainMenuComponent, canActivate: [AuthGuard]},
+  {path: 'main-menu', component: MainMenuComponent},
   {path: 'deconnexion', component: DeconnexionComponent },
   {path: 'authentification', component: AuthentificationComponent},
   {path: 'inscription', component: InscriptionComponent},

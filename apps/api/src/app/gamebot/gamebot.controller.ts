@@ -20,11 +20,12 @@ export class GamebotController {
     return 'This action returns all games against a bot';
   }
   
+  @Get('creatures')
   async getFightersData() {
     
     var creature:Creature;
     
-    await this.usersService.getUser("admin").then((user:User) => {
+    await this.usersService.getUser('1').then((user:User) => {
       var test=this.creatureService.getOneById(user.dogemon);
 
       test.then((returnedCreature)=>{
