@@ -2,6 +2,7 @@
 <nav>
        
 
+                <a routerLink="/main-menu" routerLinkActive="active">HOME</a>
                  <div *ngIf="isUserLoggedIn; else isLogOut">
                      <a routerLink="/deconnexion" routerLinkActive="active">DECONNEXION</a>
                  </div>
@@ -10,7 +11,7 @@
                      <a routerLink="/authentification" routerLinkActive="active">CONNEXION</a>
                  </ng-template>
 
-                 <a class="nav-link" href="#">A&nbsp;PROPOS</a>
+                 <a routerLink="/apropos" routerLinkActive="active">A&nbsp;PROPOS</a>
 
 </nav>
 <hr>

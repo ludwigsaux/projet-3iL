@@ -9,9 +9,10 @@ import { InscriptionComponent } from './inscription/inscription.component';
 import { AuthGuard } from './auth.guard';
 import { DeconnexionComponent } from './deconnexion/deconnexion.component';
 import { CombatComponent } from './combat/combat.component';
+import { AproposComponent } from './apropos/apropos.component';
 
 const routes: Routes = [
-  {path: 'main-menu', component: MainMenuComponent, canActivate: [AuthGuard]},
+  {path: 'main-menu', component: MainMenuComponent},
   {path: 'deconnexion', component: DeconnexionComponent },
   {path: 'authentification', component: AuthentificationComponent},
   {path: 'inscription', component: InscriptionComponent},
@@ -19,6 +20,7 @@ const routes: Routes = [
   {path: 'game', component: GameComponent},
   {path: 'gamebot', component: GamebotComponent},
   {path: 'combat', component: CombatComponent},
+  {path: 'apropos', component: AproposComponent}
   // otherwise redirect to home
   // { path: '', redirectTo: 'main-menu', pathMatch: 'full' }
 ];

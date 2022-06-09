@@ -18,6 +18,7 @@ import {
 } from '@angular/common/http';
 import { IndexComponent } from './index/index.component';
 import { CombatComponent } from './combat/combat.component';
+import { AproposComponent } from './apropos/apropos.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { CombatComponent } from './combat/combat.component';
     GameComponent,
     IndexComponent,
     CombatComponent,
+    AproposComponent,
   ],
 
   imports: [
