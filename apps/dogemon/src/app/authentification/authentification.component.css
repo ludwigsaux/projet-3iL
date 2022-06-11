@@ -1,4 +1,4 @@
-  a:link { text-decoration: none; }
+a:link { text-decoration: none; }
 
   a:visited { text-decoration: none; }
 
@@ -44,11 +44,21 @@
 	  align-content: center;
   }
 
+  .invalid-feedback{
+    color:red;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+
   input{
     height: 30px;
   }
 
-
+  button{
+    background-color: #292929;
+    border-color: #292929;
+    border-style: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
   
 /*
 =====
@@ -290,4 +300,3 @@ body{
     color: var(--uirLinkTextColor) !important;
     text-decoration: var(--uirLinkTextDecoration) !important;
 }
-

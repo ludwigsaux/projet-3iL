@@ -1,41 +1,65 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormControl } from '@angular/forms';
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { AuthService } from '../auth.service';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
+
 
 @Component({
-   selector: 'app-authentification',
-   templateUrl: './authentification.component.html',
-   styleUrls: ['./authentification.component.css']
+  selector: 'app-authentification',
+  templateUrl: './authentification.component.html',
+  styleUrls: ['./authentification.component.css']
 })
 export class AuthentificationComponent implements OnInit {
 
-   userName!: string;
-   password!: string;
    formData!: FormGroup;
+   loading = false;
+   submitted = false;
+   returnUrl!: string;
+ 
+  constructor(private authService : AuthService,
+              private route: ActivatedRoute, 
+              private router : Router,
+              private formBuilder: FormBuilder) { 
 
-   constructor(private authService : AuthService, private router : Router) { }
+                if (this.authService.isUserLoggedIn) {
+                  this.router.navigate(['/']);
+                }
 
-   ngOnInit() {
-      this.formData = new FormGroup({
-         userName: new FormControl("admin"),
-         password: new FormControl("admin"),
+              }
+
+  ngOnInit(){
+      this.formData = this.formBuilder.group({
+        userName: ['', Validators.required],
+        password: ['', Validators.required]
       });
+
+      // get return url from route parameters or default to '/'
+      this.returnUrl = this.route.snapshot.queryParams['returnUrl'] || '/';
+
    }
 
-   onClickSubmit(data: any) {
-      this.userName = data.userName;
-      this.password = data.password;
+  // convenience getter for easy access to form fields
+  get f() { return this.formData.controls; }
 
-      console.log("Login page: " + this.userName);
-      console.log("Login page: " + this.password);
+  onSubmit() {
+    
+    this.submitted = true;
 
-      this.authService.login(this.userName, this.password)
-         .subscribe( data => { 
-            console.log("Is Login Success: " + data); 
-      
-           if(data) this.router.navigate(['/expenses']); 
-      });
-   }
+    // stop here if form is invalid
+    if (this.formData.invalid) {
+      return;
+    }
+
+    this.loading = true;
+
+    this.authService.login(this.f.userName.value, this.f.password.value)
+    .subscribe(
+        data => {
+            this.router.navigate(['/main-menu']);
+        },
+        error => {
+            this.loading = false;
+        });
+ }
+
 }
